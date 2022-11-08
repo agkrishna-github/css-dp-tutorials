@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Drop Down Menu design - Easy Tutorials</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="menu-bar">
+
+<ul>
+
+<li class = "active"><span>#</span><a href="#">Home</a></li>
+<li><a href="#"><span>#</span>About Us</a>
+
+<div class="sub-menu-1">
+
+	<ul>
+
+	<li><a href="#">MISSION</a></li>
+	<li><a href="#">VISION</a></li>
+	<li><a href="#">TEASER</a></li>
+
+	</ul>
+
+</div>
+
+
+
+</li>
+<li><a href="#"><span>#</span>Services</a></li>
+<li><a href="#"><span>#</span>Clients</a></li>
+<li><a href="#"><span>#</span>Investers</a></li>
+<li><a href="#"><span>#</span>Pricing</a></li>
+<li><a href="#"><span>#</span>Training</a></li>
+<li><a href="#"><span>#</span>Contact</a></li>
+
+
+</ul>
+
+</div>
+
+</body>
+
+</html>

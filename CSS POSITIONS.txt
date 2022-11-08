@@ -1,0 +1,793 @@
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+CSS POSSITIONS
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+ALL TYPES OF CSS POSITIONS
+
+1. STATIC
+2. RELATIVE
+3. ABSOLUTE
+4. FIXED
+5. STICKY
+
+,,,,,,,,,,,,,,,,,,,,
+
+* {
+	margin:0px;
+	padding:0px;
+	box-sizzing:border-box;
+	font-family:Arial, Helvetica, sans-sarif;
+	
+}
+
+.child-1,
+.child-2,
+.child-3,
+.child-4 {
+	padding:15px;
+	margin:20px 0px;
+
+}
+
+.parent {
+
+	border: 5px solid #333;
+	backgorund: #dfdfdf;
+	padding: 20px;
+	margin-top: 25px;
+	position:relative;
+}
+
+.child-1 {
+	background-color: chocolate;
+	width:auto;
+	position:absolute;
+	bottom:0px;
+	right:0px;
+}
+
+.child-2 {
+	background-color:teal;
+	position:relative;
+	left:40px;
+	bottom:20px;
+}
+
+.child-3 {
+	background-color:brown;
+	position:absolute;
+	top:0px;
+}
+
+.child-4 {
+	background-color:royalblue;
+}
+
+//static is default style
+
+<body>
+	<div class="parent">
+	<h1>Parent</h1>
+	<div class="child-1">Child1</div>
+	<div class="child-2">Child2</div>
+	<div class="child-3">Child3</div>
+	
+	</div>
+
+
+</body>
+
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+STATIC POSITION IS A DEFAULT POSITION.
+
+RELATIVE POSITION IS USED TO MOVE THE ELEMENT TO RIGHT BOTTOM TOP LEFT. AND IT OVERFLOWS THE OTHER ELIMENTS.
+
+ABSOLUTE POSITION IS USED WITH RELATIVE POSITION AND THE RELATIVE POSITION SHOULD BE APPLIED FOR ITS PARENT ELIMENT. SO THAT WE CAN APPLY
+
+THE ABSOLUTE POSITIONS IN RELATED TO ITS PARENT OR ELSE THE ABSOLUTE POSITION CAN BE APPLITED TO ITS BODY OR DOCUMENT POSITONS.
+
+THE FIXED POSITION IS FIXED WHERE THE ELIMENT SHOULD BE FIXED. IT CAN NOT BE SCORLED WITH THE DOCUMENT.
+
+THE STICKY POSITION APPLIES THE STICKY POSITION TO THE ELIMENT THAT WHERE IT SHOULD BE STOPS ITS MOVING.
+
+THE FOUR POSITIONS HAVE FOUR VALUES:
+
+top
+left
+bottom
+right
+
+
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+CSS MEDIA QUERIES
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+we have 3 types of dive types:
+
+1. screen
+2. print
+3. speach
+
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+body {
+
+	background:#dfdfdf;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-sarif;
+
+}
+
+h1 {
+	font-size:42px;
+}
+
+p {
+	font-size:20px;
+}
+
+...
+
+@media screen {
+	h1 {
+		color:tomato;	
+}
+}
+
+...
+
+@media print {
+
+	h1 {
+		color:teal;
+}
+	p{
+		color:orange;
+}
+
+	body {
+		background:#777;
+}
+}
+
+...
+
+@media all {
+	h1 {
+		color:tomato;	
+}
+}
+
+...
+
+@media all and (max-width:500px){
+	h1 {
+		color:tomato;	
+}
+	body {
+		background:violet;
+}
+}
+
+...
+
+@media all and (orientation:landscape){
+
+	h1 {
+		color:teal;
+}
+}
+
+...
+
+@media all and (orientation:landscape) and (max-width:500px){
+
+	h1 {
+		color:teal;
+}
+}
+
+...
+
+@media all and (orientation:landscape) and (max-width:500px){
+
+	h1 {
+		color:teal;
+}
+	body {
+		background: yellow;
+}
+}
+
+...
+
+@media all and (orientation:landscape), (max-width:500px){
+
+	h1 {
+		color:teal;
+}
+	body {
+		background: yellow;
+}
+}
+
+...
+
+@media all and (orientation:landscape), (min-width:500px){
+
+	h1 {
+		color:teal;
+}
+	body {
+		background: yellow;
+}
+}
+
+,,,,,,,,,,,,,,,,,,,,,,,,
+
+<body>
+	<h1 class = "es">devices</h1>
+	<h1 class = "s">devices</h1>
+	<h1 class = "md">devices</h1>
+	<h1 class = "ld">devices</h1>
+	<h1 class = "eld">devices</h1>
+
+
+</body>
+
+.es,
+.s,
+.md,
+.ld,
+.eld {
+	display:none;
+}
+
+	/* extra small devices (phones, 600px and down) */
+
+ 
+@media only screen and (max-width: 600px) {
+
+	.es {
+
+	display: block;
+	color: springgreen;
+}
+	
+	.s,
+	.md,
+	.ld,
+	.eld {
+	display:none;
+}
+}
+
+,,,,,,,,,,,,,,,,,
+
+@media only screen and (min-width: 600px) {
+
+		.s {
+
+	display: block;
+	color: rebeccapurple;
+}
+	
+	.es,
+	.md,
+	.ld,
+	.eld {
+	display:none;
+}
+	
+}
+
+,,,,,,,,,,,,,,,,,,,,,,
+
+/* Medium devices (landscape tablets, 768px and up)*/
+
+@media only screen and (min-width: 768px) {
+
+	.md {
+
+	display: block;
+	color: teal;
+}
+	
+	.es,
+	.s,
+	.ld,
+	.eld {
+	display:none;
+}
+
+}
+
+,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+/* Large devices (laptops/desktops, 992px and up)*/
+
+@media only screen and (min-width: 992px) {
+
+	.ld {
+
+	display: block;
+	color: brown;
+}
+	
+	.es,
+	.s,
+	.md,
+	.eld {
+	display:none;
+}
+
+}
+
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+/* Extra Large devices (large laptops/desktops, 1200px and up)*/
+
+@media only screen and (min-width: 1200px) {
+
+	.eld {
+
+	display: block;
+	color: royalblue;
+}
+	
+	.es,
+	.s,
+	.md,
+	.ld {
+	display:none;
+}
+
+}
+
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+/* Responsive layout - When the screen size is decreased.
+
+@media (max-width: 700px) {
+
+	.row,
+	.navbar,
+	.side,
+	.main,
+	.navbar a {
+	
+	width: 100%;
+}
+
+	.navbar a {
+	
+	display:block;
+}
+}
+
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+CSS FLEX BOX:
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+Layout before flexbox...
+
+-> Block, for sections
+-> Inline, for text
+-> Table, for 2 dimensional table
+-> Position and floats
+
+...
+
+Flex box;
+
+-> it is not a CSS framework
+-> Designed to 1-D layout Model
+
+-> Deals with 1-D at a time (rows or columns)
+
+-> Differs from CSS Grid Layout which is 2-D model controls (rows and column) at the same time.
+
+...
+
+Two Axes
+
+Main Axis
+
+Flow direction -row
+
+Flow direction - verticle line
+
+...
+
+Cross Axis
+
+3.52
+
+,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+<style>
+
+.flex-container {
+
+	width:100%;
+	height: 500px;
+	display:flex;
+	flex-direction:row;
+	// flex-direction:column;
+	   justify-content:flex-start;
+	// justify-content:flex-end;
+	// justify-content:space-around;
+	// justify-content:space-evenly;
+	// justify-content:space-between;
+	// justify-content:center;
+	// flex-wrap: wrap;
+	// align-items: stretch;
+	// align-items: flex-start;
+	// align-items: flex-end;
+	// align-items: center;
+	// align-content: center;
+	// align-content: flex-start;
+	// align-content: flex-end;
+	// align-content: space-between;
+	// align-content: space-around;
+	// flex-flow: row wrap;
+	// flex-flow: row nowrap;
+	
+}
+
+.flex-item-1 {
+
+	width:120px;
+	min-height:50px;
+}
+
+.flex-item-2 {
+
+	width:120px;
+	min-height:100px;
+}
+
+.flex-item-3 {
+
+	width:120px;
+	min-height:150px;
+}
+
+.flex-item-4 {
+
+	width:120px;
+	min-height:150px;
+}
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+<body>
+
+<h1> Flex Box </h1>
+
+<div class = "flex-container">
+
+<div class = "flex-item flex-item-1">ITEM 1</div>
+<div class = "flex-item flex-item-2">ITEM 2</div>
+<div class = "flex-item flex-item-3">ITEM 3</div>
+<div class = "flex-item flex-item-4">ITEM 4</div>
+<div class = "main-axis"></div>
+<div class = "cross-axis"></div>
+
+</div>
+
+
+
+</body>
+
+
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+<style>
+
+.flex-container {
+
+	width:100%;
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+     // justify-content: flex-end;
+     // justify-content: flex-start;		
+     // justify-content:space-around;
+     // justify-content:space-evenly;
+     // justify-content:space-between;	
+     // align-items: center;
+     // align-items: flex-end;
+     // align-items: flex-start;
+	
+}
+
+.flex-item-1 {
+
+	width:120px;
+	min-height:50px;
+}
+
+.flex-item-2 {
+
+	width:120px;
+	min-height:100px;
+}
+
+.flex-item-3 {
+
+	width:120px;
+	min-height:150px;
+}
+
+.flex-item-4 {
+
+	width:120px;
+	min-height:150px;
+}
+
+
+
+
+
+
+</style>
+
+
+
+
+<body>
+
+<h1> Flex Box </h1>
+
+<div class = "flex-container">
+
+<div class = "flex-item flex-item-1">ITEM 1</div>
+<div class = "flex-item flex-item-2">ITEM 2</div>
+<div class = "flex-item flex-item-3">ITEM 3</div>
+
+<div class = "main-axis"></div>
+<div class = "cross-axis"></div>
+
+</div>
+
+
+
+</body>
+
+
+17.48
+
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+<style>
+
+* {
+
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+}
+
+.flex-container {
+
+	width:100%;
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+        align-items: stretch;
+	
+}
+
+.flex-item-1 {
+
+	width:120px;
+	min-height:50px;
+	flex-shrink: 0;
+	flex-grow: 1;
+	// flex-grow: 2;
+	flex-basis: 0;
+	// flex : 2 0 0;
+	align-self: center;
+	order:3;
+	
+}
+
+.flex-item-2 {
+
+	width:120px;
+	min-height:100px;
+	flex-shrink: 0;
+	flex-grow: 1;
+	// flex-grow: 2;
+	flex-basis: 0;
+	align-self: flex-start;
+	order:1;
+}
+
+.flex-item-3 {
+
+	width:120px;
+	min-height:150px;
+	flex-grow: 1;
+	flex-basis: 0;
+	order:2;
+}
+
+.flex-item-4 {
+
+	width:120px;
+	min-height:150px;
+}
+
+
+
+
+
+
+</style>
+
+
+
+
+<body>
+
+<h1> Flex Box </h1>
+
+<div class = "flex-container">
+
+<div class = "flex-item flex-item-1">ITEM 1</div>
+<div class = "flex-item flex-item-2">ITEM 2</div>
+<div class = "flex-item flex-item-3">ITEM 3</div>
+
+<div class = "main-axis"></div>
+<div class = "cross-axis"></div>
+
+</div>
+
+
+
+</body>
+
+
+24.05
+
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+<style>
+
+* {
+
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+}
+
+.flex-container {
+
+	width:100%;
+	display:flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+        align-items: stretch;
+	
+}
+
+.flex-item-1 {
+
+	width:120px;
+	min-height:50px;
+	//flex-shrink: 0;
+	//flex-grow: 1;
+	// flex-grow: 2;
+	//flex-basis: 0;
+	flex : 2 0 0;
+	align-self: center;
+	order:3;
+	
+}
+
+.flex-item-2 {
+
+	width:120px;
+	min-height:100px;
+	flex-shrink: 0;
+	flex-grow: 1;
+	// flex-grow: 2;
+	flex-basis: 0;
+	align-self: flex-start;
+	order:1;
+}
+
+.flex-item-3 {
+
+	width:120px;
+	min-height:150px;
+	flex-grow: 1;
+	flex-basis: 0;
+	order:2;
+}
+
+.flex-item-4 {
+
+	width:120px;
+	min-height:150px;
+}
+
+
+
+
+
+
+</style>
+
+
+
+
+<body>
+
+<h1> Flex Box </h1>
+
+<div class = "flex-container">
+
+<div class = "flex-item flex-item-1">ITEM 1</div>
+<div class = "flex-item flex-item-2">ITEM 2</div>
+<div class = "flex-item flex-item-3">ITEM 3</div>
+
+<div class = "main-axis"></div>
+<div class = "cross-axis"></div>
+
+</div>
+
+
+
+</body>
+
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

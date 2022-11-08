@@ -1,0 +1,48 @@
+{
+
+    "users":[
+
+        {
+            "name":"krishna",
+            "age":29,
+            "isprogrammer":true,
+            "skills":["HTML","CSS","jAVASCRIPT"],
+            "address":{
+                "city":"Mumbai",
+                "state":"MH",
+                "country":"India"
+            }
+            
+        },
+            {
+                "name":"krishna",
+                "age":29,
+                "isprogrammer":true,
+                "skills":["HTML","CSS","jAVASCRIPT"],
+                "address":{
+                    "city":"Mumbai",
+                    "state":"MH",
+                    "country":"India"
+                }
+            
+            },
+            {
+                "name":"krishna",
+                "age":29,
+                "isprogrammer":true,
+                "skills":["HTML","CSS","jAVASCRIPT"],
+                "address":{
+                    "city":"Mumbai",
+                    "state":"MH",
+                    "country":"India"
+                }
+            
+            }
+        
+        
+
+
+    ]
+
+
+}
