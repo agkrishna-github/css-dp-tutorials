@@ -1,2 +1,1 @@
-# dipesh-tutorials
-dipesh development tutorials project
+# css dp tut
